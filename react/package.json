@@ -1,0 +1,19 @@
+{
+  "name": "reactjs-by-webpack",
+  "version": "1.0.0",
+  "description": "step by step learn reactjs-by-webpack",
+  "main": "app/main.js",
+  "dependencies": {
+    "babel-preset-es2015": "^6.5.0"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js"
+  },
+  "author": "leega0",
+  "license": "MIT"
+}

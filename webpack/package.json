@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "jsx-loader": "^0.13.2"
+  }
+}

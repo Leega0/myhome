@@ -1,0 +1,1 @@
+var http=require("http"),querystring=require("querystring");http.createServer(function(n,t){var e="";n.setEncoding("utf8"),n.on("data",function(n){e+=n}),n.on("end",function(){t.end(e)})}).listen(8080),console.log("服务器启动完成");

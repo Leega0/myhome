@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js-review</title>
+</head>
+<body>
+	<script>
+		function Range (from,to) {
+			 this.from = from;
+			 this.to = to; 
+		}
+		Range.prototype.includes = function (x) {
+				 return this.from<=x&&x<=this.to; 
+			}	
+	</script>
+</body>
+</html>

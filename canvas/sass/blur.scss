@@ -1,0 +1,62 @@
+*{
+	margin:0;
+	padding:0;
+}
+$basecolor:#ddd;
+@mixin contain(){
+	margin: 0 auto;
+}
+body{
+	background-color: $basecolor;
+}
+#blur-div{
+	position: relative;
+	overflow: hidden;
+	@include contain;
+}
+#blur-image{
+	display: block;
+	@include contain;
+	filter: blur(50px);
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index:0;
+}
+#canvas{
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index:9;
+}
+.button{
+	display: block;
+	position: absolute;
+	z-index:200;
+	width: 100px;
+	height: 30px;
+	color:white;
+	text-decoration: none;
+	text-align:center;
+	line-height: 30px;
+	border-radius: 5px;
+	&#resetbutton{
+		left: 50px;
+		bottom: 20px;
+		background-color: #058;
+		&:hover{
+			background-color: #047;
+		}
+	}
+	&#showbutton{
+		right: 50px;
+		bottom: 20px;
+		background-color: #085;
+		&:hover{
+			background-color: #074;
+		}
+	}
+}
+
+
+
