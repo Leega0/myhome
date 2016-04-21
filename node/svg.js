@@ -1,47 +1,30 @@
-var ToolTip = function(targetElement,text){
-	this.target = targetElement;
-	this.text = text;
-	this.delayTimeout = null;
-	this.delaytime = 1500;
-	// 开始创建dom
-	this.element = document.createElement('div');
-	this.element.style.display = 'none';
-	this.element.style.position = 'absolute';
-	this.element.className = 'tooltip';
-	document.getElementsByTagName('body')[0].appendChild(this.element);
-	this.element.innerHTML = this.text;
+var xhrHandler = XhrManager.createXhrHander();
 
-	// 绑定事件
-	var that = this;
-	this.target.addEventListener('mouseover',function(e){
-		that.showDelay(e);
-	});
-	this.target.addEventListener('mouseout',function(e){
-		that.hide();
-	});
-};
-ToolTip.prototype = {
-	showDelay:function(e){
-		if (this.delayTimeout==null) {
-			var that =this;
-			var x = e.clientX;
-			var y = e.clientY;
-			this.delayTimeout = setTimeout(function(){
-				that.show(x,y);
-			},this.delaytime);
-		}
+var callback = {
+	success:function(responseText){
+		var stats = eval('('+responseText+')');
+		displayPageviews(stats);
 	},
-	show:function(x,y){
-		clearTimeout(this.delayTimeout);
-		this.delayTimeout = null;
-		this.element.style.left = x+'px';
-		this.element.style.top = (y+20)+'px';
-		this.element.style.display = 'block';
-	},
-	hide:function(){
-		clearTimeout(this.delayTimeout);
-		this.delayTimeout = null;
-		this.element.style.display = 'none';
+	failure:function(statusCode){
+		throw new Error('Asynchronus request for stats failed.');
 	}
 };
-var tt = new ToolTip(linkElement,'hello')
+xhrHandler.request('GET','/stats/getPageviews/?page=index.html',callback);
+
+var PageStats = new Interface('PageStats',['getPageviews','getUniques','getBrowserShare','getTopSearchTerms','getMostVisitedPages']);
+var StatsProxy = (function(){
+	var xhrHandler = XhrManager.createXhrHander();
+	var urls={
+		pageviews:'/stats/getPageviews',
+		uniques:'/stats/getUniques',
+		browserShare:'/stats/getBrowserShare',
+		topSearchIterms:'/stats/getTopSearchTerms',
+		mostVisitedPages:'/stats/getMostVisitedPages'
+	};
+
+	function xhrFailure(){
+		throw new Error('StatsProxy:Asynchronus request for stats failed.')
+	}
+
+	function fetchData(url,dataCallback,startDate)
+})
