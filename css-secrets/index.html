@@ -4,32 +4,19 @@
 	<meta charset="UTF-8">
 	<title>css-secrets</title>
 	<style>
-		*{
-			text-decoration: none;
-		}
-		.ui-btn{
-			padding: .3em .8em;
-			border: 1px solid rgba(0,0,0,.1);
-			background: #58a linear-gradient(hsla(0,0%,100%,.2),transparent);
-			border-radius: .2em;
-			box-shadow: 0 .05em .25em rgba(0,0,0,.5);
-			color: white;
-			text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
-			font-size: 125%;
-			line-height: 1.5;
-		}
-		.ui-btn-cancel{
-			background-color: #c00;
-		}
-		.ui-btn-ok{
-			background-color: #6b0;
+		.box{
+			width: 100px;
+			height: 100px;
+			margin: 20px auto;
+			background: yellowgreen;
+			box-shadow: 0 0 0 10px #655,
+			0 0 0 15px deeppink,
+			0 2px 5px 15px rgba(0,0,0,.6);
 		}
 	</style>
 </head>
 <body>
-	<a href="" class="ui-btn">YES</a>
-	<a href="" class="ui-btn ui-btn-ok">OK</a>
-	<a href="" class="ui-btn ui-btn-cancel">Cancel</a>
+	<div class="box"></div>
 <script type="text/javascript">
 	function $$(selector,context) {
 		context = context || document;
