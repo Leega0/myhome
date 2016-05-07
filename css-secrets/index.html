@@ -4,17 +4,17 @@
 	<meta charset="UTF-8">
 	<title>css-secrets</title>
 	<style>
-		div{
-			background: tan;
-			border-radius: .8em;
-			padding: 1em;
-			box-shadow: 0 0 0 .6em #655;
-			outline: .6em solid #655;
+		.box{
+			width: 100px;
+			height: 100px;
+			margin: 10px auto;
+			background: linear-gradient(#fb3 33.3%,#58a 0,#58a 66%,yellowgreen 0);	
+			background-size: 100% 30px;		
 		}
 	</style>
 </head>
 <body>
-		<div>I have a nice subtle inner rounding,don't I look pretty?</div>
+<div class="box"></div>
 <script type="text/javascript">
 	function $$(selector,context) {
 		context = context || document;
