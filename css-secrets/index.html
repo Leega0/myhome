@@ -4,18 +4,17 @@
 	<meta charset="UTF-8">
 	<title>css-secrets</title>
 	<style>
-		.box{
-			width: 200px;
-			height: 200px;
-			margin: 20px auto;
-			padding: 10px;
-			background: url(bg.png) no-repeat #58a;
-			background-position: calc(100% - 20px) calc(100% - 20px);
+		div{
+			background: tan;
+			border-radius: .8em;
+			padding: 1em;
+			box-shadow: 0 0 0 .6em #655;
+			outline: .6em solid #655;
 		}
 	</style>
 </head>
 <body>
-	<div class="box"></div>
+		<div>I have a nice subtle inner rounding,don't I look pretty?</div>
 <script type="text/javascript">
 	function $$(selector,context) {
 		context = context || document;
