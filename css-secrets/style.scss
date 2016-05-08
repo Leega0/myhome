@@ -1,29 +1,13 @@
-@mixin cheakerboard($size,$base,
-	$accent:rgba(0,0,0,.25)) {
-	background: $base;
-	background-image:
-	linear-gradient(45deg,
-		$accent 25%,transparent 0,
-		transparent 75%,$accent 0),
-	linear-gradient(45deg,
-		$accent 25%,transparent 0,
-		transparent 75%,$accent 0);
-	background-size:2*$size 2*$size;
-	background-position: 0 0, $size $size;
-}
-.button{
-	width: 200px;
-	height: 50px;
-	text-align:center;
-	line-height: 50px;
-	display:block;
-	position: relative;
-	&::before{
-		content: '';
-		position: absolute;
-		top:0;right:0;bottom:0;left:0;
-		z-index: -1;
-		background: #58a;
-		transform: skew(-45deg);
+.picture{
+	width: 300px;
+	margin:70px auto;
+	img{
+		-webkit-clip-path: polygon(50% 0,100% 50%,
+			50% 100%, 0 50%);
+		transition: 1s -webkit-clip-path;
+		&:hover{
+			-webkit-clip-path: polygon(0 0,100% 0,
+				100% 100%, 0 100%);
+		}
 	}
 }
