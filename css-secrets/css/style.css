@@ -1,13 +1,19 @@
-@keyframes ants {
-  to {
-    background-position: 100%; } }
-.box {
+.button {
   width: 200px;
-  height: 200px;
-  margin: 10px auto;
-  padding: 1em;
-  border: 1px solid transparent;
-  background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, black 0, black 25%, white 0, white 50%) 0/0.6em 0.6em;
-  animation: ants 12s linear infinite; }
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+  position: relative; }
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background: #58a;
+    transform: skew(-45deg); }
 
 /*# sourceMappingURL=style.css.map */
