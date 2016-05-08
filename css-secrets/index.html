@@ -5,11 +5,14 @@
 	<title>css-secrets</title>
 	<style>
 		.box{
-			width: 100px;
-			height: 100px;
+			width: 300px;
+			height: 300px;
 			margin: 10px auto;
-			background: linear-gradient(45deg, #fb3 25%, #58a 0,#58a 50%,#fb3 0,#fb3 75%,#58a 0);	
-			background-size:42px 42px;		
+			background: #58a;
+			background-image: repeating-linear-gradient(30deg,
+				hsla(0,0%,100%,.1),
+				hsla(0,0%,100%,.1) 15px,
+				transparent 0,transparent 30px);
 		}
 	</style>
 </head>
