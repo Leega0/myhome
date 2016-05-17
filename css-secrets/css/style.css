@@ -1,17 +1,27 @@
-.picture {
-  position: relative;
-  display: inline-block;
-  padding: .5em 1em .35em;
-  color: white; }
-  .picture::before {
+.pie {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: yellowgreen;
+  background-image: linear-gradient(to right, transparent 50%, #655 0);
+  overflow: hidden; }
+  .pie::before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    background: #58a;
-    transform: perspective(0.5em) rotateX(5deg); }
+    display: block;
+    margin-left: 50%;
+    height: 100%;
+    background-color: inherit;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0 / 50%;
+    animation: spin 50s linear  infinite, bg 100s step-end infinite;
+    animation-play-state: paused;
+    animation-delay: inherit; }
+
+@keyframes spin {
+  to {
+    transform: rotate(0.5turn); } }
+@keyframes bg {
+  50% {
+    background: #655; } }
 
 /*# sourceMappingURL=style.css.map */

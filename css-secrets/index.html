@@ -6,15 +6,18 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="picture">
-1234
-</div>
+<div class="pie">50</div>
+<div class="pie">30</div>
 <script type="text/javascript">
 	function $$(selector,context) {
 		context = context || document;
 		var elements = context.querySelectorAll(selector);
 		return Array.prototype.slice.call(elements);
 	}
+	$$('.pie').forEach(function(pie) {
+    var p = parseFloat(pie.textContent);
+    pie.style.animationDelay = '-' + p + 's';
+});
 </script>
 </body>
 </html>
