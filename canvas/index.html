@@ -15,5 +15,29 @@
 	<a href="javascript:show()" class="button" id="showbutton">显示</a>
 	</div>
 	<script src="js/blur.js"></script>
+	<script type="text/javascript">
+		function timeGetText (url,timeout,callback) {
+			 var request = new XMLHttpRequest();
+			 var timeout = false;
+			 var timer = setTimeout(function () {
+			 	 timeout = true;
+			 	 request.abort(); 
+			 }, timeout);
+			 request.open("GET",url);
+			 request.onreadystatechange = function () {
+			 	 if (request.readyState!==4) {
+			 	 	return;
+			 	 } 
+			 	 if (timeout) {
+			 	 	return;
+			 	 }
+			 	 clearTimeout(timer);
+			 	 if (request.status===200) {
+			 	 	callback(request.responseText);
+			 	 }
+			 } ;
+			 request.send(null);
+		}
+	</script>
 </body>
 </html>
