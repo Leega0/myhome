@@ -1,27 +1,30 @@
-.box {
+.note {
   width: 500px;
   height: 500px;
-  margin: 10px auto;
-  background: #58a;
   color: white;
+  box-sizing: border-box;
+  padding: 234px 10px 0 10px;
+  margin: 0 auto;
   position: relative;
   background: #58a;
   /* Fallback */
-  background: linear-gradient(-150deg, transparent 1.5em, #58a 0);
-  border-radius: .5em;
-  box-sizing: border-box;
-  padding: 234px 10px 0 10px; }
-  .box::before {
+  background: -webkit-linear-gradient(230deg, transparent 2em, #58a 0);
+  background: linear-gradient(-140deg, transparent 2em, #58a 0);
+  border-radius: .5em; }
+  .note::before {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
+    background: -webkit-linear-gradient(right top, transparent 50%, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.4)) 100% 0 no-repeat;
     background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.4)) 100% 0 no-repeat;
-    width: 1.73em;
-    height: 3em;
-    transform: translateY(-1.3em) rotate(-30deg);
-    transform-origin: bottom right;
+    width: 2.61081em;
+    height: 3.11145em;
+    -webkit-transform: translateY(-0.50063em) rotate(-10deg);
+            transform: translateY(-0.50063em) rotate(-10deg);
+    -webkit-transform-origin: bottom right;
+            transform-origin: bottom right;
     border-bottom-left-radius: inherit;
-    box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.15); }
+    box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=style.css.map */
