@@ -1,20 +1,27 @@
-body, main::before {
-    background: url("../tiger.png") 0 / cover fixed;
-}
-main {
+.box{
 	width: 500px;
 	height: 500px;
-	text-align:center;
-	margin: 10px auto;
-    position: relative;
-    background: hsla(0,0%,100%,.3);
-    overflow: hidden;
-}
-main::before {
-	content: '';
+	margin:10px auto;
+	background:#58a;
+	color:white;
+	position: relative;
+    background: #58a; /* Fallback */
+    background:linear-gradient(-150deg,transparent 1.5em, #58a 0);
+    border-radius:.5em;
+    box-sizing:border-box;
+    padding:234px 10px 0 10px;
+    &::before{
+    	content: '';
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    -webkit-filter: blur(7px);
-    margin: -30px;
-    z-index: -1;
+    top: 0; right: 0;
+    background: linear-gradient(to left bottom,
+        transparent 50%, rgba(0,0,0,.2) 0, rgba(0,0,0,.4))
+        100% 0 no-repeat;
+    width: 1.73em;
+    height: 3em;
+    transform: translateY(-1.3em) rotate(-30deg);
+    transform-origin: bottom right;
+    border-bottom-left-radius: inherit;
+    box-shadow: -.2em .2em .3em -.1em rgba(0,0,0,.15);
+    }
 }
