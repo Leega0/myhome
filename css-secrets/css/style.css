@@ -1,30 +1,16 @@
-.note {
-  width: 500px;
-  height: 500px;
-  color: white;
-  box-sizing: border-box;
-  padding: 234px 10px 0 10px;
-  margin: 0 auto;
-  position: relative;
-  background: #58a;
-  /* Fallback */
-  background: -webkit-linear-gradient(230deg, transparent 2em, #58a 0);
-  background: linear-gradient(-140deg, transparent 2em, #58a 0);
-  border-radius: .5em; }
-  .note::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: -webkit-linear-gradient(right top, transparent 50%, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.4)) 100% 0 no-repeat;
-    background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0.4)) 100% 0 no-repeat;
-    width: 2.61081em;
-    height: 3.11145em;
-    -webkit-transform: translateY(-0.50063em) rotate(-10deg);
-            transform: translateY(-0.50063em) rotate(-10deg);
-    -webkit-transform-origin: bottom right;
-            transform-origin: bottom right;
-    border-bottom-left-radius: inherit;
-    box-shadow: -0.2em 0.2em 0.3em -0.1em rgba(0, 0, 0, 0.2); }
+dd {
+  margin: 0;
+  font-weight: bold; }
+
+dt, dd {
+  display: inline; }
+
+dd + dt::before {
+  content: '\A';
+  white-space: pre; }
+
+dd + dd::before {
+  content: ', ';
+  font-weight: normal; }
 
 /*# sourceMappingURL=style.css.map */
