@@ -1,16 +1,32 @@
-dd {
-  margin: 0;
-  font-weight: bold; }
+input[type="checkbox"] + label::before {
+  content: '\a0';
+  /* non-break space */
+  display: inline-block;
+  vertical-align: .2em;
+  width: .8em;
+  height: .8em;
+  margin-right: .2em;
+  border-radius: .2em;
+  background: silver;
+  text-indent: .15em;
+  line-height: .65;
+  -webkit-transition: all 300ms;
+  transition: all 300ms; }
 
-dt, dd {
-  display: inline; }
+input[type="checkbox"]:checked + label::before {
+  content: '\2713';
+  background: yellowgreen; }
 
-dd + dt::before {
-  content: '\A';
-  white-space: pre; }
+input[type="checkbox"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0); }
 
-dd + dd::before {
-  content: ', ';
-  font-weight: normal; }
+input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 .1em .1em #58a; }
+
+input[type="checkbox"]:disabled + label::before {
+  background: gray;
+  box-shadow: none;
+  color: #555; }
 
 /*# sourceMappingURL=style.css.map */
