@@ -1,32 +1,41 @@
-input[type="checkbox"] + label::before {
-  content: '\a0';
-  /* non-break space */
+* {
+  margin: 0;
+  padding: 0; }
+
+.stage {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto; }
+
+.path {
+  background-color: gray;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  text-align: center; }
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0turn) translateY(-150px) translateY(50%) rotate(1turn);
+            transform: rotate(0turn) translateY(-150px) translateY(50%) rotate(1turn); }
+  to {
+    -webkit-transform: rotate(1turn) translateY(-150px) translateY(50%) rotate(0turn);
+            transform: rotate(1turn) translateY(-150px) translateY(50%) rotate(0turn); } }
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0turn) translateY(-150px) translateY(50%) rotate(1turn);
+            transform: rotate(0turn) translateY(-150px) translateY(50%) rotate(1turn); }
+  to {
+    -webkit-transform: rotate(1turn) translateY(-150px) translateY(50%) rotate(0turn);
+            transform: rotate(1turn) translateY(-150px) translateY(50%) rotate(0turn); } }
+.avatar {
+  width: 50px;
+  height: 50px;
   display: inline-block;
-  vertical-align: .2em;
-  width: .8em;
-  height: .8em;
-  margin-right: .2em;
-  border-radius: .2em;
-  background: silver;
-  text-indent: .15em;
-  line-height: .65;
-  -webkit-transition: all 300ms;
-  transition: all 300ms; }
-
-input[type="checkbox"]:checked + label::before {
-  content: '\2713';
-  background: yellowgreen; }
-
-input[type="checkbox"] {
-  position: absolute;
-  clip: rect(0, 0, 0, 0); }
-
-input[type="checkbox"]:focus + label::before {
-  box-shadow: 0 0 .1em .1em #58a; }
-
-input[type="checkbox"]:disabled + label::before {
-  background: gray;
-  box-shadow: none;
-  color: #555; }
+  margin-top: calc(50% - 25px);
+  border-radius: 50%;
+  -webkit-animation: spin 6s infinite linear;
+          animation: spin 6s infinite linear; }
 
 /*# sourceMappingURL=style.css.map */
