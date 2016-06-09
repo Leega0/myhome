@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>starsky</title>
+	<style type="text/css">
+		.canvas-bg{
+			position: relative;
+			background: url(../img/background.jpg) no-repeat center bottom;
+			height: 800px;
+			overflow: hidden;
+
+		}
+		.canvas-bg>canvas{
+			position: absolute;
+			width: 1920px;
+			height: 100%;
+			left: 50%;
+			margin-left: calc(-1920px / 2);
+		}
+	</style>
+</head>
+<body>
+<div class="canvas-bg">
+	<canvas id="starCanvas"></canvas>
+</div>
+<script type="text/javascript" src="js/starcanvas.js"></script>
+</body>
+</html>
