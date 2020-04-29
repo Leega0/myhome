@@ -22,7 +22,7 @@
     "babel-plugin-react-transform": "^2.0.0",
     "bootstrap": "^3.3.6",
     "css-loader": "^0.23.1",
-    "jquery": "^2.2.4",
+    "jquery": "^3.5.0",
     "less": "^2.6.0",
     "less-loader": "^2.2.2",
     "react-data-growth": "0.0.2",
